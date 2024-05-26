@@ -1,6 +1,4 @@
 *.pkl
-*.csv
-*.csv.zip
 *.joblib
 *.png
 test.ipynb
