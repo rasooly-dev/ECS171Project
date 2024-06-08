@@ -2,3 +2,4 @@
 *.joblib
 *.png
 test.ipynb
+fasttext
