@@ -2,3 +2,6 @@
 *.joblib
 *.png
 test.ipynb
+
+fastapiVenv/
+
