@@ -11,6 +11,17 @@ const Form: FC = () => {
         e.preventDefault()
         const url = e.currentTarget["url-input"].value
         console.log(url)
+
+        // fetch("/api/predict", {
+        // method: "POST",
+        // headers: {
+        //     "Content-Type": "application/json",
+        // },
+        // body: JSON.stringify({ url }),
+        // })
+        // .then((res) => res.json())
+        // .then((data) => console.log(data))
+        // .catch((err) => console.error(err))
     }}
     >
         <input 
