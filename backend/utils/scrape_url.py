@@ -1,7 +1,6 @@
 from urllib.parse import urlparse
 from bs4 import BeautifulSoup
 from tld import get_tld
-import difflib
 from selenium import webdriver
 
 class Data:
