@@ -1,6 +1,7 @@
 from urllib.parse import urlparse
 from bs4 import BeautifulSoup
 from tld import get_tld
+import difflib
 from selenium import webdriver
 
 class Data:
@@ -117,8 +118,7 @@ class ScrapeService:
     def domain_title_match_score(soup, special_url, parsed_url):
         title_tag = soup.find('title')
         title = title_tag.string if title_tag else ''
-        print(title, special_url)
-        return 100
+        return difflib.SequenceMatcher(None, title, special_url).ratio() * 100
 
     @staticmethod
     def check_description(soup):
