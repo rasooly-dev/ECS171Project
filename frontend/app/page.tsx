@@ -1,3 +1,4 @@
+import Demo from "@/components/Demo"
 import Form from "@/components/Form"
 
 export default function Home() {
@@ -17,7 +18,7 @@ export default function Home() {
                 </nav>
             </header>
 
-            <div className="flex flex-col gap-5 my-auto">
+            <div className="flex flex-col gap-5 my-auto pb-4">
                 <section
                 id="abstract"
                 className="flex flex-col gap-1"
@@ -68,19 +69,7 @@ export default function Home() {
                     </ul>
                 </section>
 
-                <section
-                id="demo"
-                className="flex flex-col gap-1"
-                >
-                    <h2
-                        className="text-xl font-bold"
-                    >Demo</h2>
-                    <p>
-                        When entering a URL please ensure the URL is in the following format: <code>http://www.example.com</code> or <code>https://www.example.com</code>.
-                    </p>
-
-                    <Form />
-                </section>
+                <Demo />
             </div>
 
             <footer
