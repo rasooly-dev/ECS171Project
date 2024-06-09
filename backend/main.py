@@ -9,14 +9,9 @@ from pydantic import BaseModel
 
 app = FastAPI()
 
-origins = [
-    "http://localhost:3000",  # Adjust this to match your front-end URL
-    "https://example.com",
-]
-
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=origins,  # Or ["*"] to allow all domains
+    allow_origins=["*"],
     allow_credentials=True,
     allow_methods=["*"],  # Or specify precise methods ['GET', 'POST', etc.]
     allow_headers=["*"],  # Or specify precise headers
