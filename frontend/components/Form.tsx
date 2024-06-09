@@ -2,7 +2,11 @@
 
 import { FC, FormEvent } from "react"
 
-const Form: FC = () => {
+interface FormProps {
+    _onSubmit: (url: string) => void
+}
+
+const Form: FC<FormProps> = ({ _onSubmit }) => {
     return (
     <form
     name="demo-form"
@@ -10,7 +14,10 @@ const Form: FC = () => {
     onSubmit={(e: FormEvent<HTMLFormElement>) => {
         e.preventDefault()
         const url = e.currentTarget["url-input"].value
-        console.log(url)
+        
+        if (_onSubmit)
+            _onSubmit(url)
+        
 
         // fetch("/api/predict", {
         // method: "POST",
